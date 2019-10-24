@@ -3,13 +3,12 @@ const cuid = require('cuid');
 let users = [
   {
     id: '1',
-    username: 'rinat',
-    displayName: 'Khafiyatullin Rinat',
+    username: 'glnnrys',
+    displayName: 'Rinat Khafiyatullin',
     bio:
-      'Avito Front-End Engineer helping people build beautiful products through web technologies · React, GraphQL',
-    email: 'rkhafiyatullin@avito.ru',
-    photo:
-      'https://avatars1.githubusercontent.com/u/3629161?s=400&v=4',
+        'Avito Front-End Engineer helping people build beautiful products through web technologies · React, GraphQL',
+    email: 'glenn@glennreyes.com',
+    photo: 'https://ca.slack-edge.com/T02D1A3NL-U0KD25A2E-84dd07d8e8f1-512',
     createdAt: new Date('January 2, 2019').toISOString(),
   },
   {
@@ -18,7 +17,7 @@ let users = [
     displayName: 'Evgeniy Fedyushkin',
     bio: `Avito Front-End Engineer`,
     email: 'esfedyushkin@avito.ru',
-    photo: 'https://reactalicante.es/uploads/images/speakers/nacho.jpg',
+    photo: 'https://ca.slack-edge.com/T02D1A3NL-U4LJXR0JF-3a3552c11d67-512',
     createdAt: new Date('February 13, 2019').toISOString(),
   },
   {
@@ -27,7 +26,7 @@ let users = [
     displayName: 'Oksana Zenkova',
     bio: `Avito Front-End Engineer`,
     email: 'oazenkova@avito.ru',
-    photo: 'https://reactalicante.es/uploads/images/speakers/avatar.jpg',
+    photo: 'https://ca.slack-edge.com/T02D1A3NL-UMFBB8ERH-ff1420155a5b-512',
     createdAt: new Date('February 14, 2019').toISOString(),
   },
 ];
@@ -45,7 +44,7 @@ const updateUser = async user => {
     throw new Error(`User doesn't exist.`);
   }
   users = users.map(usr =>
-    usr.username === user.username ? { ...usr, ...user } : usr,
+      usr.username === user.username ? { ...usr, ...user } : usr,
   );
 
   return { ...userToUpdate, ...user };
@@ -63,7 +62,7 @@ const deleteUser = async user => {
 const getAllUsers = async () => users;
 const getUserById = async id => users.find(user => user.id === id);
 const getUserByUsername = async username =>
-  users.find(user => user.username === username);
+    users.find(user => user.username === username);
 
 module.exports = {
   createUser,

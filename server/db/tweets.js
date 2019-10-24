@@ -4,7 +4,7 @@ let tweets = [
   {
     id: '1',
     tweet: 'Hola! This is my first tweet.',
-    from: 'rinat',
+    from: 'glnnrys',
     createdAt: new Date('Sep 9, 2019').toISOString(),
   },
   {
@@ -22,7 +22,7 @@ let tweets = [
   {
     id: '4',
     tweet: 'So many people attending this tweet!',
-    from: 'rinat',
+    from: 'glnnrys',
     createdAt: new Date('Sep 26, 2019').toISOString(),
   },
 ];
@@ -47,7 +47,7 @@ const deleteTweet = async ({ id }) => {
 const getAllTweets = async () => tweets;
 const getTweetById = async id => tweets.find(tweet => tweet.id === id);
 const getTweetsFrom = async username =>
-  tweets.filter(tweet => tweet.from === username);
+    tweets.filter(tweet => tweet.from === username);
 
 module.exports = {
   createTweet,
